@@ -1,17 +1,17 @@
 data class Post(
     var id: Int = 0,
-    val ownerId: Int = 0,
+    val ownerId: Int? = null,
     val fromId: Int = 0,
     val createdBy: Int = 0,
     val date: Int = 0,
     val text: String = "No text",
     val replyOwnerId: Int = 0,
-    val replyPostId: Int = 0,
+    val replyPostId: Int? = null,
     val friendsOnly: Boolean = true,
     val comments: Comments = Comments(),
     val copyright: String = "NON",
     val likes: Likes = Likes(),
-    val reposts: Reposts = Reposts(),
+    val reposts: Reposts? = null,
     val postType: String = "symple",
     val signerId: Int = 0,
     val canPin: Boolean = true,
@@ -20,7 +20,8 @@ data class Post(
     val isPinned: Int = 0,
     val markedAsAds: Boolean = true,
     val isFavorite: Boolean = true,
-    val postponedId: Int = 0
+    val postponedId: Int? = null,
+    val attachments: Array<Attachment>? = null
 )
 
 data class Comments(
