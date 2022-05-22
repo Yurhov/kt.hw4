@@ -4,25 +4,25 @@ sealed class Attachment {
 
 data class AttachmentPhoto(
     override val type: String = "photo",
-    val attachmentContent: Photo
+    val photo: Photo
 ) : Attachment()
 
 data class AttachmentVideo(
     override val type: String = "video",
-    val attachmentContent: Video
+    val video: Video
 ) : Attachment()
 
 data class AttachmentAudio(
     override val type: String = "audio",
-    val attachmentContent: Audio
+    val audio: Audio
 ) : Attachment()
 
 data class AttachmentDoc(
     override val type: String = "doc",
-    val attachmentContent: Doc
+    val doc: Doc
 ) : Attachment()
 
 data class AttachmentLink(
     override val type: String = "link",
-    val attachmentContent: Link
+    val link: Link
 ) : Attachment()
